@@ -1,0 +1,12 @@
+.NavigationBar {
+  a {
+    display: block;
+    padding: .5rem .5rem;
+    color: rgba(255,255,255,.5);
+
+    &:hover {
+      text-decoration: none;
+      color: rgba(255,255,255,.75);
+    }
+  }
+}
