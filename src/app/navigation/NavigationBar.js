@@ -13,6 +13,7 @@ const NavigationBar = () =>
     </Navbar.Brand>
     <Nav className="mr-auto">
       <Link to="/">Home</Link>
+      <Link to="/blog">Blog</Link>
       <Link to="/about-me">About me</Link>
     </Nav>
   </Navbar>
