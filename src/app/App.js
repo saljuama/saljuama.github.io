@@ -12,7 +12,7 @@ import NotFound from './NotFound'
 
 import './App.scss'
 
-const App = () =>
+const Content = () =>
   <div className="App">
     <NavigationBar/>
     <Switch>
@@ -23,15 +23,15 @@ const App = () =>
     </Switch>
   </div>
 
-const Application = () =>
+const App = () =>
   <Provider store={ store }>
     <ConnectedRouter history={ history }>
       <BrowserRouter>
         <Switch>
-          <Route path="/" component={ App }/>
+          <Route path="/" component={ Content }/>
         </Switch>
       </BrowserRouter>
     </ConnectedRouter>
   </Provider>
 
-export default Application
+export default App
