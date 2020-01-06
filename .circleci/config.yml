@@ -3,19 +3,22 @@ version: 2
 
 workflows:
   version: 2
-  run-tests-and-publish:
+  run_tests_and_publish:
     jobs:
-      - run-tests:
-      - publish-github-page:
+      - run_tests:
+          filters:
+            branches:
+              only: dev
+      - publish_github_page:
+          filters:
+            branches:
+              only: dev
           requires:
-            - run-tests
+            - run_tests
 
 jobs:
-  run-tests:
+  run_tests:
     working_directory: ~/saljuama.github.io
-    branches:
-      only:
-        - dev
     docker:
       - image: circleci/node:12.14.0
     steps:
@@ -31,11 +34,8 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
       - run: yarn test
 
-  publish-github-page:
+  publish_github_page:
     working_directory: ~/saljuama.github.io
-    branches:
-      only:
-        - dev
     steps:
       - checkout
       - run: yarn deploy
