@@ -36,6 +36,8 @@ jobs:
 
   publish_github_page:
     working_directory: ~/saljuama.github.io
+    docker:
+      - image: circleci/node:12.14.0
     steps:
       - checkout
       - run: yarn deploy
