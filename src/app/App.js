@@ -8,7 +8,7 @@ import NavigationBar from './navigation/NavigationBar'
 import Home from './pages/home/Home'
 import Blog from './pages/blog/Blog'
 import AboutMe from './pages/aboutMe/AboutMe'
-import NotFound from './NotFound'
+import NotFound from './pages/notFound/NotFound'
 
 import './App.scss'
 
