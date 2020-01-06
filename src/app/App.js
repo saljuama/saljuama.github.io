@@ -1,28 +1,37 @@
 import React from 'react'
-import { Switch, Route } from 'react-router-dom'
+import { Provider } from 'react-redux'
+import { history, store } from '../config/store'
+import { ConnectedRouter } from "connected-react-router"
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 import NavigationBar from './navigation/NavigationBar'
 import Home from './pages/home/Home'
-import AboutMe from './pages/aboutMe/AboutMe'
 import Blog from './pages/blog/Blog'
+import AboutMe from './pages/aboutMe/AboutMe'
 import NotFound from './NotFound'
 
 import './App.scss'
-
-
-const routes = [
-  { path: "/about-me", component: AboutMe },
-  { path: "/blog", component: Blog },
-  { path: "/", component: Home }
-]
 
 const App = () =>
   <div className="App">
     <NavigationBar/>
     <Switch>
-      { routes.map(route => <Route exact path={ route.path } render={ () => (<route.component/>) }/>) }
-      <Route render={ () => (<NotFound/>) }/>
+      <Route path="/about-me" component={ AboutMe }/>
+      <Route path="/blog" component={ Blog }/>
+      <Route path="/" component={ Home }/>
+      <Route component={ NotFound }/>
     </Switch>
   </div>
 
-export default App
+const Application = () =>
+  <Provider store={ store }>
+    <ConnectedRouter history={ history }>
+      <BrowserRouter>
+        <Switch>
+          <Route path="/" component={ App }/>
+        </Switch>
+      </BrowserRouter>
+    </ConnectedRouter>
+  </Provider>
+
+export default Application
