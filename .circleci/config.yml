@@ -47,4 +47,6 @@ jobs:
           keys:
             - v1-dependencies-{{ checksum "package.json" }}
             - v1-dependencies-
+      - run: git config --global user.email "circleci@saljuama.dev"
+      - run: git config --global user.name "saljuama (Circle CI)"
       - run: yarn deploy
