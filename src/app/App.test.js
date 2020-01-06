@@ -1,10 +1,13 @@
 import React from 'react'
-import { render } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
+
 import App from './App'
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />)
+describe('The Application', () => {
+  it('renders the landing page', () => {
+    render(<App />)
 
-  const linkElement = getByText(/Home Page/i)
-  expect(linkElement).toBeInTheDocument()
+    const landingPageTitle = screen.getByText(/Home Page/i)
+    expect(landingPageTitle).toBeInTheDocument()
+  })
 })
