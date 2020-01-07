@@ -1,12 +1,22 @@
 .NavigationBar {
   a {
+    box-sizing: border-box;
+    width: 100px;
     display: block;
     padding: .5rem .5rem;
     color: rgba(255,255,255,.5);
+    border-bottom: 2px solid transparent;
 
     &:hover {
       text-decoration: none;
       color: rgba(255,255,255,.75);
+      border-bottom: 2px solid rgba(255,255,255,.75);
+    }
+
+    &.active {
+      font-weight: bold;
+      color: rgba(255,255,255,.75);
+      border-bottom: 4px solid rgba(255,255,255,.75);
     }
   }
 }
