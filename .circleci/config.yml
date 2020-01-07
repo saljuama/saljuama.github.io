@@ -49,7 +49,7 @@ jobs:
 
 commands:
   setup_github_write_access:
-    description: ""
+    description: "Setup Github write access"
     steps:
       - add_ssh_keys:
           fingerprints:
