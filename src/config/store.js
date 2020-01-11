@@ -4,11 +4,14 @@ import { applyMiddleware, combineReducers, createStore } from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import thunk from 'redux-thunk'
 
+import { navigationReducer } from '../app/navigation/reducer'
+
 
 export const history = createBrowserHistory()
 
 const rootReducer = history => combineReducers({
-  router: connectRouter(history)
+  router: connectRouter(history),
+  navigation: navigationReducer
 })
 
 const middleware = composeWithDevTools(applyMiddleware(routerMiddleware(history), thunk))

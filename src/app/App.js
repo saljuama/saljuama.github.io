@@ -4,7 +4,7 @@ import { history, store } from '../config/store'
 import { ConnectedRouter } from "connected-react-router"
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
-import NavigationBar from './navigation/NavigationBar'
+import NavigationBar from './navigation/components/NavigationBar'
 import Home from './pages/home/Home'
 import Blog from './pages/blog/Blog'
 import AboutMe from './pages/aboutMe/AboutMe'
