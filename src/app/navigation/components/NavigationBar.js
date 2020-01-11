@@ -30,7 +30,7 @@ class NavigationBar extends React.Component {
                 data-testid='blog-link'
                 className={ this.sectionLinkClass(mainSections.BLOG) }
                 onClick={ () => this.props.navigateTo(mainSections.BLOG) }>Blog</Link>
-          <Link to="/about-me"
+          <Link to="/about"
                 data-testid='about-link'
                 className={ this.sectionLinkClass(mainSections.ABOUT) }
                 onClick={ () => this.props.navigateTo(mainSections.ABOUT) }>About me</Link>

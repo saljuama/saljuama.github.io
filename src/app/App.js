@@ -16,9 +16,9 @@ const Content = () =>
   <div className="App">
     <NavigationBar/>
     <Switch>
-      <Route path="/about-me" component={ AboutMe }/>
-      <Route path="/blog" component={ Blog }/>
-      <Route path="/" component={ Home }/>
+      <Route exact path="/" component={ Home }/>
+      <Route exact path="/blog" component={ Blog }/>
+      <Route exact path="/about" component={ AboutMe }/>
       <Route component={ NotFound }/>
     </Switch>
   </div>
