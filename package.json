@@ -22,7 +22,7 @@
     "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.5.0",
     "deep-freeze": "^0.0.1",
-    "gh-pages": "^2.1.1",
+    "gh-pages": "^3.1.0",
     "node-sass": "^4.13.0"
   },
   "scripts": {
@@ -30,7 +30,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "predeploy": "yarn build",
-    "deploy": "gh-pages -b main -d build"
+    "deploy": "gh-pages -b main -e ./docs -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
