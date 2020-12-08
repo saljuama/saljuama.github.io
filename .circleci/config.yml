@@ -7,11 +7,11 @@ workflows:
       - run_tests:
           filters:
             branches:
-              only: dev
+              only: main
       - publish_github_page:
           filters:
             branches:
-              only: dev
+              only: main
           requires:
             - run_tests
 
