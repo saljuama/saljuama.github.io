@@ -1,6 +1,6 @@
 import React from 'react'
-import { store } from '../config/store'
-import { BrowserRouter } from 'react-router-dom'
+import store from '../config/store'
+import {BrowserRouter} from 'react-router-dom'
 import { render } from '@testing-library/react'
 import { Provider } from 'react-redux'
 

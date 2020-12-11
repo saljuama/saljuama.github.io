@@ -1,3 +1,7 @@
+import {createBrowserHistory} from "history";
+
+export const history = createBrowserHistory()
+
 export const mainSections = {
   HOME: 'HOME',
   BLOG: 'BLOG',
