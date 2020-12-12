@@ -1,7 +1,5 @@
 import React from 'react'
-import {Provider} from 'react-redux'
-import store from '../config/store'
-import {BrowserRouter, Route, Switch} from 'react-router-dom'
+import {Route, Switch} from 'react-router-dom'
 import {NavigationBar} from './navigation/components/NavigationBar'
 import {Home} from './pages/home/Home'
 import {Blog} from './pages/blog/Blog'
