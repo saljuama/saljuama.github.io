@@ -1,5 +1,7 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import {Link, Route, Switch, useParams, useRouteMatch} from 'react-router-dom'
+import ReactMarkdown from 'react-markdown'
+import axios from 'axios'
 import {articleUrl, published} from "./published"
 import './Blog.scss'
 
@@ -29,10 +31,18 @@ const ArticleList = () => {
 
 export const Article = () => {
   const {category, article} = useParams()
+  const [markdown, setMarkdown] = useState(undefined)
+
+  useEffect(() => {
+    axios
+      .get(`https://raw.githubusercontent.com/saljuama/articles/main/${category}/${article}`)
+      .then(response => setMarkdown(response.data))
+      .catch(() => setMarkdown("# Error"))
+  }, [markdown, category, article])
+
   return (
     <div className='Article'>
-      <h3>{category}</h3>
-      <h3>{article}</h3>
+      <ReactMarkdown children={markdown}/>
     </div>
   )
 }

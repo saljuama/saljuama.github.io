@@ -18,7 +18,7 @@ export const published = {
     {
       category: 'high-performing-teams',
       title: 'What is High Performance?',
-      markdown: 'what-is-high-performance?.md'
+      markdown: 'what-is-high-performance.md'
     },
     {
       category: 'high-performing-teams',
@@ -31,9 +31,9 @@ export const published = {
       markdown: 'feature-toggles-and-you.md'
     },
     {
+      category: 'agile-engineering',
       title: 'Breaking it into small pieces',
-      markdown: 'breaking-it-into-small-pieces.md',
-      category: 'agile-engineering'
+      markdown: 'breaking-it-into-small-pieces.md'
     }
   ]
 }
