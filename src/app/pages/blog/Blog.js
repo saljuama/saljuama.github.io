@@ -5,15 +5,13 @@ import './Blog.scss'
 export const Blog = () => {
   const [article, setArticle] = useState(undefined)
 
-  useEffect(async () => {
-    if (article === undefined) {
+  useEffect(() => {
+    const fetchData = async () => {
       const response = await fetch('https://raw.githubusercontent.com/saljuama/articles/main/experiment/some-experiment.md')
-      if (response.status === 200) {
-        const text = await response.text()
-        setArticle(text)
-      }
+      return response.status === 200 ? await response.text() : ''
     }
-  })
+    setArticle(fetchData())
+  }, [article])
 
   return (
     <div className='Article'>

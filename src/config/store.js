@@ -1,6 +1,6 @@
 import {configureStore} from "@reduxjs/toolkit"
-import {dummyReducer} from "../app/dummySlice";
+import {articlesReducer as articles} from "../app/features/articles/articlesSlice";
 
 export default configureStore({
-  reducer: {dummy: dummyReducer}
+  reducer: {articles}
 })
